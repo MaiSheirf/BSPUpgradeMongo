@@ -10,7 +10,7 @@ import java.util.Map;
 @Setter
 @Getter
 @Component // OR add a @Bean config method as explained above
-@ConfigurationProperties(prefix = "mongodb.databases")
+@ConfigurationProperties(prefix = "mongodb")
 public class MongoSettings {
     private Map<String, String> values;
 

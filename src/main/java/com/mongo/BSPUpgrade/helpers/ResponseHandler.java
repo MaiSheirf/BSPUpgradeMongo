@@ -29,27 +29,7 @@ public class ResponseHandler {
 
     private static ResponseData generateServiceResponseData(List<Object> data, String serviceName) {
         ResponseData responseData = new ResponseData();
-        if (serviceName.equals("getServiceNameList")) {
-            responseData.setMongoServiceName(data);
-        }
-        if (serviceName.equals("KeyPaths")) {
-            responseData.setKeyPathsData(data);
-        }
-        if (serviceName.equals("AllTransactions")) {
-            responseData.setAllTransactionsData(data);
-        }
-        if (serviceName.equals("FullJourney")) {
-            responseData.setFullJourneyData(data);
-        }
-        if (serviceName.equals("ServiceHitsPerDay")) {
-            responseData.setServiceHitsPerDay(data);
-        }
-        if (serviceName.equals("AllTransactionsWithoutSN")) {
-            responseData.setAllTransactionsDataWithoutSN(data);
-        }
-        if (serviceName.equals("FullJourneyBYTXID")) {
-            responseData.setFullJourneyBYTXIDData(data);
-        }
+
         if (serviceName.equals("MobileServiceNames")) {
             responseData.setMobileServicesNames(data);
         }
@@ -59,7 +39,7 @@ public class ResponseHandler {
         if (serviceName.equals("MobileExceptions")) {
             responseData.setMobileExceptions(data);
         }
-        if (serviceName.equals("MobileGlobalTRX")) {
+        if ("MobileGlobalTRX".equals(serviceName)) {
             responseData.setMobileGlobalTRX(data);
         }
         if (serviceName.equals("MobileServiceJourney")) {
